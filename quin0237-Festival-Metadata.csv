@@ -1,0 +1,32 @@
+Data Item,,,Metadata,,,,,,
+Table Name,Column Name,Data Type,Length Minimum,Length Max,Numeric Precision,Numeric Scale,Can It Be Null,Description,Source
+location_t,tent_letter,character,1,1,,,NO,Letter assigned to each tent,Computer Generated
+location_t,length,integer,1,11,32,0,YES,Length of tent,Tent Rental Agency
+location_t,width,integer,1,11,32,0,YES,Width of tent,Tent Rental Agency
+location_t,capacity,integer,1,11,32,0,NO,Tent capacity of people,Tent Rental Agency
+location_t,expected_people,integer,1,11,32,0,NO,Expected number of people visiting for the tent,Surveys
+employee_t,id,character,6,6,,,NO,Employee ID number,Computer Generated
+employee_t,manager_id,character,6,6,,,YES,Employee's manager ID number,Manager
+employee_t,f_name,character varying,20,20,,,NO,Employee's first name,Employee
+employee_t,l_name,character varying,20,20,,,NO,Empoyee's last name,Employee
+employee_t,position_title,character varying,30,30,,,NO,Employee's position title,Manager
+employee_t,salary,numeric,4,9,8,2,NO,Employee's salary,Manager
+employee_t,activity_id,character,4,4,,,NO,ID of the activity the employee is in charge of,Employee
+volunteer_t,supervisor_id,character,6,6,,,NO,ID of Volunteer's supervisor,Volunteer Supervisor
+volunteer_t,f_name,character varying,20,20,,,NO,First name of volunteer,Volunteer
+volunteer_t,l_name,character varying,20,20,,,NO,Last name of Volunteer,Volunteer
+volunteer_t,id,character varying,6,6,,,NO,ID of volunteer  ,Computer Generated
+volunteer_t,hours,integer,1,11,32,0,YES,Number of hours a volunteer is available,Volunteer
+volunteer_t,activity_id,character,4,4,,,YES,Activity that the volunteer is working at,Volunteer Supervisor
+activity_t,name,character varying,30,30,,,NO,Name of an activity,Manager
+activity_t,description,character varying,50,50,,,YES,Description of the activity,Manager
+activity_t,cost,numeric,4,4,3,2,YES,Cost to participate in the activity,Manager
+activity_t,id,character,4,4,,,NO,ID of the activity  ,Computer Generated
+activity_t,location,character,1,1,,,NO,Tent that the activity is located in,Manager
+prize_t,name,character varying,20,20,,,NO,Name of the prize,Supplying Company
+prize_t,cost,numeric,4,5,4,2,YES,Cost to buy the prize at the festival,"Manager, Supplying Company"
+prize_t,description,character varying,50,50,,,YES,Description of the prize,Supplying Company
+prize_t,quantity,integer,1,11,32,0,NO,Quantity of the prize in stock,Manager
+prize_t,id,character,4,4,,,NO,ID of the prize,Computer Generated
+activityprize_t,activityid,character,4,4,,,NO,ID of the activity that the prize is found at,Manager
+activityprize_t,prizeid,character,4,4,,,NO,ID of the prize found at the activity,Manager
